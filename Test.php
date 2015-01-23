@@ -96,3 +96,10 @@ $pb = new ProductBuilder();
 $pb->builder();
 $product = $pb->getProduct();
 $product->say();
+
+
+$stp = new StrategyProduct();
+$stp->setCache(new FileCacheStrategy());
+$stp->getCache()->get("aa");
+$stp->setCache(new MemCacheStrategy());
+$stp->getCache()->get("aa");
