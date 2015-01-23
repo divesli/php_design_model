@@ -13,7 +13,7 @@
  * @date 2014/12/16 10:49:10
  * @version $Revision$ 
  * @filecoding UTF-8 
- * @brief 
+ * @brief 设计模式示例测试 
  *  
  */
 
@@ -91,13 +91,13 @@ $s->attach($o3);
 
 $s->run();
 
-
+// Builder
 $pb = new ProductBuilder();
 $pb->builder();
 $product = $pb->getProduct();
 $product->say();
 
-
+// Strategy
 $stp = new StrategyProduct();
 $stp->setCache(new FileCacheStrategy());
 $stp->getCache()->get("aa");
